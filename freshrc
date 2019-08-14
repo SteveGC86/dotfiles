@@ -1,0 +1,46 @@
+# freshshell.com
+#
+# Examples:
+#
+#   fresh twe4ked/dotfiles shell/functions/\*
+#   fresh jasoncodes/dotfiles shell/aliases/rails.sh
+#   fresh jasoncodes/dotfiles config/tmux.conf --file
+#
+# See http://freshshell.com/readme for documentation.
+
+fresh freshshell/fresh bin/fresh --bin
+fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
+
+# Shell
+fresh-options
+  fresh env/\*
+  fresh robbyrussell/oh-my-zsh lib/history.zsh
+  fresh env/aliases.sh
+fresh-options
+
+# Bin
+fresh bin/\* --bin
+
+if [[ -x "$(command -v pacman)" ]]; then
+  fresh bin/arch/\* --bin
+fi
+
+# Git
+fresh git/\* --file
+
+fresh-options --file=~/.gitignore_global --marker=#
+  fresh github/gitignore Global/Vim.gitignore
+  fresh github/gitignore Global/macOS.gitignore
+  fresh github/gitignore Node.gitignore
+  fresh git/gitignore
+fresh-options
+
+# Vim
+fresh nvim/plugins/coc.json --file=~/.config/nvim/coc-settings.json
+fresh nvim/plugs.vim --file=~/.config/nvim/init.vim
+fresh-options --file=~/.config/nvim/init.vim
+  fresh nvim/config/\*.vim
+  fresh nvim/plugins/\*.vim
+  fresh hackling/dotfiles vim/keybindings/visualblockindent.vim
+fresh-options
+fresh nvim/colors.vim --file=~/.config/nvim/init.vim

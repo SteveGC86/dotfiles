@@ -1,0 +1,43 @@
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+tap 'caskroom/versions'
+
+#Brews
+
+brew 'asciiquarium'
+brew 'ctop'
+brew 'direnv'
+brew 'exa'
+brew 'fzf'
+brew 'git'
+brew 'git-fixup'
+brew 'gnupg'
+brew 'hopenpgp-tools'
+brew 'htop'
+brew 'jq'
+brew 'mas'
+brew 'neovim'
+brew 'pinentry-mac'
+brew 'ripgrep'
+brew 'sl'
+brew 'wget'
+brew 'ykman'
+brew 'yubikey-personalization'
+brew 'zsh'
+
+#Casks
+
+cask 'alfred'
+cask 'docker'
+cask 'firefox'
+cask 'flux'
+cask 'google-chrome'
+cask 'insomnia'
+cask 'steam'
+cask 'the-unarchiver'
+cask 'visual-studio-code'
+cask 'vlc'
+
+# App Store
+
+mas 'Bear', id: 1091189122
