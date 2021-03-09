@@ -3,7 +3,7 @@
   email = steven.g.christenson@gmail.com
   signingkey = F62FD562AB3FA41E
 [push]
-  default = simple
+  default = current
 [color]
   branch      = auto
   diff        = auto

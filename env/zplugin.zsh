@@ -2,6 +2,7 @@ source "${HOME}/.zplugin/bin/zplugin.zsh"
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
+zplugin light asdf-vm/asdf
 zplugin ice silent wait"0" blockf
 zplugin light zsh-users/zsh-completions
 
